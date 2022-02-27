@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo App</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="container">
+      <header>
+          <h1>
+              My Todo App
+          </h1>
+          <div>
+              <button class="all-done" onclick="updateAll(true)">
+                <svg fill="#11d85d" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32" width="40px" 
+                height="40px"><path d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 
+                29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 
+                11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 
+                22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 
+                19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 
+                16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 
+                15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"/></svg>
+              </button>
+              <button class="all-return" onclick="updateAll(false)">
+                <svg fill="#e7352f" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 16 16" width="35px" 
+                height="35px"><path d="M 2.464844 1 L 4.152344 2.6875 C 2.835938 3.878906 2 5.589844 
+                2 7.5 C 2 11.085938 4.914063 14 8.5 14 C 12.085938 14 15 11.085938 15 7.5 C 15 3.914063 
+                12.085938 1 8.5 1 L 8 1 L 8 2 L 8.5 2 C 11.542969 2 14 4.457031 14 7.5 C 14 10.542969 
+                11.542969 13 8.5 13 C 5.457031 13 3 10.542969 3 7.5 C 3 5.859375 3.722656 4.402344 
+                4.859375 3.394531 L 6 4.535156 L 6 1 Z"/></svg>
+              </button>
+          </div>
+          
+      </header>
+
+      <main>
+        <form class="input-form" id="form">
+          <input type="text" placeholder="Add your new task" id="input">
+          <button>Add</button>
+        </form>
+
+        <ul class="todo-list" id="todo-list">
+        </ul>
+      </main>
+
+      <footer>
+        <button onclick="deleteAll()">Clear All
+          <img src="./img/delete.svg" alt="">
+        </button>
+      </footer>
+    </div>
+  
+    <script src="app.js"> </script>
+  
+  </body>
+</html>
